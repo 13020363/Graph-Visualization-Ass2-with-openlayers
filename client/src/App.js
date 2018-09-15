@@ -7,7 +7,10 @@ import TileLayer from "ol/layer/Tile";
 import BingMaps from "ol/source/BingMaps";
 import {fromLonLat} from 'ol/proj.js';
 import {easeIn, easeOut} from 'ol/easing.js';
-// import OSM from "ol/source/OSM";
+import OSM from "ol/source/OSM";
+import './App.css';
+import {defaults as defaultControls, OverviewMap} from 'ol/control.js';
+import {defaults as defaultInteractions, DragRotateAndZoom} from 'ol/interaction.js';
 
 var styles = [
     'Road',
@@ -55,7 +58,28 @@ class App extends Component {
                 })
             }));
         };
-            var map = new Map({
+
+        var overviewMapControl = new OverviewMap({
+            // see in overviewmap-custom.html to see the custom CSS used
+            className: 'ol-overviewmap ol-custom-overviewmap',
+            layers: [
+                new TileLayer({
+                    source: new OSM()
+                })
+            ],
+            collapseLabel: '\u00BB',
+            label: '\u00AB',
+            collapsed: false
+        });
+
+
+        var map = new Map({
+                controls: defaultControls().extend([
+                    overviewMapControl
+                ]),
+                interactions: defaultInteractions().extend([
+                    new DragRotateAndZoom()
+                ]),
                 layers: layers,
                 // Improve user experience by loading tiles while dragging/zooming. Will make
                 // zooming choppy on mobile or slow devices.
