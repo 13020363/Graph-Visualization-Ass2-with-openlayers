@@ -1,0 +1,110 @@
+[
+  {
+    "CityName":"Adelaide",
+    "CityPoint":[-34.929478, 138.586167]
+  },
+
+  {
+    "CityName":"Alice Springs",
+    "CityPoint":[-23.702380, 133.882141]
+  },
+
+  {
+    "CityName":"Albany",
+    "CityPoint":[-35.023249, 117.886047]
+  },
+
+  {
+    "CityName":"Broken Hill",
+    "CityPoint":[-31.959153, 141.468201]
+  },
+
+  {
+    "CityName":"Broome",
+    "CityPoint":[-17.960119, 122.239217]
+  },
+
+  {
+    "CityName":"Brisbane",
+    "CityPoint":[-27.464414, 153.023071]
+  },
+
+  {
+    "CityName":"Bendigo",
+    "CityPoint":[-36.758691, 144.280701]
+  },
+
+  {
+    "CityName":"Canberra",
+    "CityPoint":[-35.310635, 149.158521]
+  },
+
+  {
+    "CityName":"Cairns",
+    "CityPoint":[-16.920195, 145.777588]
+  },
+
+  {
+    "CityName":"Darwin",
+    "CityPoint":[-12.460715, 130.838928]
+  },
+
+  {
+    "CityName":"Hobart",
+    "CityPoint":[-42.879990, 147.332153]
+  },
+
+  {
+    "CityName":"Kalgoorlie",
+    "CityPoint":[-30.742212, 121.479108]
+  },
+
+  {
+    "CityName":"Launceston",
+    "CityPoint":[-41.438608, 147.134399]
+  },
+
+  {
+    "CityName":"Melbourne",
+    "CityPoint":[-37.805444, 144.953613]
+  },
+
+  {
+    "CityName":"Mt Isa",
+    "CityPoint":[-20.732997, 139.479675]
+  },
+
+  {
+    "CityName":"Newcastle",
+    "CityPoint":[-32.9283, 151.7817]
+  },
+
+  {
+    "CityName":"Perth",
+    "CityPoint":[-31.956823, 115.856323]
+  },
+
+  {
+    "CityName":"Pt Augusta",
+    "CityPoint":[-32.4952, 137.7894]
+  },
+
+  {
+    "CityName":"Rockhampton",
+    "CityPoint":[-23.3791, 150.5100]
+  },
+
+  {
+    "CityName": "Sydney",
+    "CityPoint":[-33.868135, 151.207581]
+  },
+
+  {
+    "CityName": "London",
+    "CityPoint":[51.507222, -0.12755]
+  }
+
+
+
+
+]

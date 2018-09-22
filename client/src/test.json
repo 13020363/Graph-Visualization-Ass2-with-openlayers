@@ -1,0 +1,443 @@
+[
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Sydney",
+    "To_City":"Melbourne",
+    "Price": "180.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Sydney",
+    "To_City":"Brisbane",
+    "Price": "170.00",
+    "AircraftModel": "A330-202",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Sydney",
+    "To_City":"Canberra",
+    "Price": "120.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Canberra",
+    "To_City":"Sydney",
+    "Price": "120.00",
+    "AircraftModel": "B737-476",
+    "EngineModel":"CFM-56-3"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Sydney",
+    "To_City":"Newcastle",
+    "Price": "90.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Newcastle",
+    "To_City":"Sydney",
+    "Price": "90.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Sydney",
+    "To_City":"Broken Hill",
+    "Price": "130.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Broken Hill",
+    "To_City":"Sydney",
+    "Price": "130.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Melbourne",
+    "To_City":"Sydney",
+    "Price": "180.00",
+    "AircraftModel": "A320-242",
+    "EngineModel":"772B-60"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Melbourne",
+    "To_City":"Canberra",
+    "Price": "140.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Canberra",
+    "To_City":"Melbourne",
+    "Price": "140.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Melbourne",
+    "To_City":"Adelaide",
+    "Price": "175.00",
+    "AircraftModel": "A737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Melbourne",
+    "To_City":"Hobart",
+    "Price": "130.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Melbourne",
+    "To_City":"Bendigo",
+    "Price": "70.00",
+    "AircraftModel": "B717-200",
+    "EngineModel":"Unknown"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Bendigo",
+    "To_City":"Melbourne",
+    "Price": "70.00",
+    "AircraftModel": "B717-200",
+    "EngineModel":"Unknown"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Melbourne",
+    "To_City":"Launceston",
+    "Price": "100.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Adelaide",
+    "To_City":"Melbourne",
+    "Price": "175.00",
+    "AircraftModel": "A737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Adelaide",
+    "To_City":"Broken Hill",
+    "Price": "100.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Broken Hill",
+    "To_City":"Adelaide",
+    "Price": "100.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "D",
+    "From_City":"Adelaide",
+    "To_City":"Perth",
+    "Price": "220.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "D",
+    "From_City":"Adelaide",
+    "To_City":"Darwin",
+    "Price": "230.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "D",
+    "From_City":"Darwin",
+    "To_City":"Adelaide",
+    "Price": "230.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "E",
+    "From_City":"Darwin",
+    "To_City":"Alice Springs",
+    "Price": "120.00",
+    "AircraftModel": "B737-476",
+    "EngineModel":"CFM-56-3"
+  },
+
+  {
+    "AirSpaceClass": "E",
+    "From_City":"Alice Springs",
+    "To_City":"Darwin",
+    "Price": "120.00",
+    "AircraftModel": "B737-476",
+    "EngineModel":"CFM-56-3"
+  },
+
+  {
+    "AirSpaceClass": "D",
+    "From_City":"Perth",
+    "To_City":"Adelaide",
+    "Price": "220.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Perth",
+    "To_City":"Albany",
+    "Price": "100.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Perth",
+    "To_City":"Kalgoorlie",
+    "Price": "80.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Perth",
+    "To_City":"Broome",
+    "Price": "90.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Albany",
+    "To_City":"Perth",
+    "Price": "100.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Kalgoorlie",
+    "To_City":"Perth",
+    "Price": "80.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Broome",
+    "To_City":"Perth",
+    "Price": "90.00",
+    "AircraftModel": "B737-476",
+    "EngineModel":"CFM-56-3"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Launceston",
+    "To_City":"Melbourne",
+    "Price": "100.00",
+    "AircraftModel": "B737-476",
+    "EngineModel":"CFM-56-3"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Launceston",
+    "To_City":"Hobart",
+    "Price": "80.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Hobart",
+    "To_City":"Melbourne",
+    "Price": "130.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Hobart",
+    "To_City":"Launceston",
+    "Price": "80.00",
+    "AircraftModel": "A320-232",
+    "EngineModel":"V2527-5A"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Brisbane",
+    "To_City":"Sydney",
+    "Price": "170.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Brisbane",
+    "To_City":"Mt Isa",
+    "Price": "170.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Brisbane",
+    "To_City":"Rockhampton",
+    "Price": "180.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":"CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Brisbane",
+    "To_City":"Cairns",
+    "Price": "230.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Brisbane",
+    "To_City":"Darwin",
+    "Price": "240.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Mt Isa",
+    "To_City":"Brisbane",
+    "Price": "170.00",
+    "AircraftModel": "A330-202",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Rockhampton",
+    "To_City":"Brisbane",
+    "Price": "180.00",
+    "AircraftModel": "A330-202",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Cairns",
+    "To_City":"Brisbane",
+    "Price": "230.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "A",
+    "From_City":"Darwin",
+    "To_City":"Brisbane",
+    "Price": "240.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Mt Isa",
+    "To_City":"Darwin",
+    "Price": "120.00",
+    "AircraftModel": "B737-3B7",
+    "EngineModel":" CFM56-3B1"
+  },
+
+  {
+      "AirSpaceClass": "B",
+      "From_City":"Darwin",
+      "To_City":"Mt Isa",
+      "Price": "120.00",
+      "AircraftModel": "B737-3B7",
+      "EngineModel":" CFM56-3B1"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Adelaide",
+    "To_City":"Pt Augusta",
+    "Price": "50.00",
+    "AircraftModel": "B717-200",
+    "EngineModel":"Unknown"
+  },
+
+  {
+    "AirSpaceClass": "C",
+    "From_City":"Pt Augusta",
+    "To_City":"Adelaide",
+    "Price": "50.00",
+    "AircraftModel": "B717-200",
+    "EngineModel":"Unknown"
+  },
+
+  {
+    "AirSpaceClass": "B",
+    "From_City":"Sydney",
+    "To_City":"London",
+    "Price": "180.00",
+    "AircraftModel": "A330-203",
+    "EngineModel":"CF6-80E142"
+  }
+
+]
