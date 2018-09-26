@@ -19,13 +19,16 @@ import testJson from './test';
 import CityJson from './City';
 // import CircleStyle from "ol/style/Circle";
 import Icon from "ol/style/Icon";
+import FullScreen from "ol/control/FullScreen";
+import Attribution from "ol/control/Attribution";
+import ScaleLine from "ol/control/ScaleLine";
+// import { Table } from 'semantic-ui-react';
+
 var styles = [
     'Road',
     'RoadOnDemand',
     'Aerial',
-    'AerialWithLabels',
-    'collinsBart',
-    'ordnanceSurvey'
+    'AerialWithLabels'
 ];
 
 //location
@@ -46,7 +49,7 @@ var labelStyle = new Style({
         placement: 'line',
         textBaseline: 'bottom',
         fill: new Fill({
-            color: 'white'
+            color: 'black'
         })
     })
 });
@@ -257,18 +260,6 @@ const findEngine = (e) => {
 }
 
 
-// const findsvg =(col,pa)=>{
-//     svg = "<svg width='200' height='200' version='1.1' xmlns='http://www.w3.org/2000/svg'>"
-//         +"<path fill='"+findCol+"'"+findPlane
-//         + "</svg>";
-// }
-
-
-
- // var svg = "<svg width='200' height='200' version='1.1' xmlns='http://www.w3.org/2000/svg'>"
- //    +"<path fill='"+col+"'"+ p
- //    + "</svg>";
-
 const view = new View({
     center: fromLonLat([134.027715,-26.029331]),
     zoom:4.5
@@ -276,6 +267,16 @@ const view = new View({
 
 
 var layers = [];
+
+var p = [
+    'A330-203',
+    'B737-3B7',
+    'B737-476',
+    'A320-232',
+    'A320-242',
+    'A737-3B7',
+    'B717-200'
+]
 
 class App extends Component {
     state={
@@ -311,11 +312,26 @@ class App extends Component {
             collapsed: false
         });
 
+        var att = new Attribution({
+            className: 'ol-attribution ol-custom-attribution',
+            label:'S',
+            collapsed:false,
+            tipLabel:'Style indicate'
+
+        });
+
         //map layer
         var map = new Map({
             controls: defaultControls().extend([
-                overviewMapControl
+                new FullScreen(),
+                overviewMapControl,
+                att,
+                new OverviewMap(),
+                new ScaleLine({
+                    units: 'metric'
+                })
             ]),
+
             interactions: defaultInteractions().extend([
                 new DragRotateAndZoom()
             ]),
@@ -328,10 +344,140 @@ class App extends Component {
         });
 
 
+        var base ='';
+        for (var z = 0; z<p.length;z++) {
+            if(z%2===0){
+                var str =
+                    '<tr>'+
+                    '  <th scope="row">'+p[z]+'</th>' +
+                    '  <td>' +
+                    '     <svg width="50" height="50" viewBox="-100 -50 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">' +
+                    '        <path d="'+findPlane(p[z])+'"/>' +
+                    '     </svg>'+
+                    '  </td>'+
+                    '  <th scope="row">'+p[z+1]+'</th>' +
+                    '  <td>' +
+                    '     <svg width="50" height="50" viewBox="-100 -50 300 300" version="1.1" xmlns="http://www.w3.org/2000/svg">' +
+                    '        <path d="'+findPlane(p[z+1])+'"/>' +
+                    '     </svg>'+
+                    '  </td>'+
+                    '</tr>';
+                base = base + str;
+            }
+          console.log(base);
+        }
+
+        var attribution = '<table class="table table-hover">' +
+            '  <thead>' +
+            '    <tr>' +
+            '      <th scope="col">Class</th>' +
+            '      <th scope="col">LineColor</th>' +
+            '      <th scope="col">Engine</th>' +
+            '      <th scope="col">PlaneColor</th>' +
+            '    </tr>' +
+            '  </thead>' +
+            '  <tbody>' +
+            '    <tr>' +
+            '      <th scope="row">A</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#ea424d" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '      <th scope="row">CF6-80E142</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#111eae" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '    <tr>' +
+            '      <th scope="row">B</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#e6ea11" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '      <th scope="row">CFM56-3B1</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#56ae2e" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '    <tr>' +
+            '      <th scope="row">C</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#363bea" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '      <th scope="row">CFM-56-3</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#19ae9a" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '    <tr>' +
+            '      <th scope="row">D</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#be42ea" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '      <th scope="row">V2527-5A</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#8311ae" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '    <tr>' +
+            '      <th scope="row">E</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#15ea5c" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '      <th scope="row">772B-60</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#e6ea11" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '    <tr>' +
+            '      <th scope="row"></th>' +
+            '      <td></td>' +
+            '      <th scope="row">Unknown</th>' +
+            '      <td>' +
+            '        <svg width="50" height="10">\n' +
+            '           <rect width="50" height="10" style="fill:#ae0b08" />\n' +
+            '        </svg>' +
+            '      </td>' +
+            '    </tr>' +
+            '  </tbody>' +
+            '  <thead>' +
+            '    <tr>' +
+            '      <th scope="col">AircraftModel</th>' +
+            '      <th scope="col">PlaneStyle</th>' +
+            '      <th scope="col">AircraftModel</th>' +
+            '      <th scope="col">PlaneStyle</th>' +
+            '    </tr>' +
+            '  </thead>' +
+            '  <tbody>' +
+                    base +
+            '  </tbody>' +
+            '</table>';
+
+
+
+
+
         var flightsSource = new VectorSource({
             wrapX: false,
-            attributions: 'Flight data by ' +
-                '<a href="http://openflights.org/data.html">OpenFlights</a>,',
+            attributions: attribution,
             loader: function() {
                 // var flightsData = flightJson.flights;
                 var flightsData = testJson;
@@ -405,7 +551,7 @@ class App extends Component {
                         // addLater(featurePoint,i * 500);
                     }
                 }
-                map.on('postcompose', animateFlights());
+                map.on('postcompose', animateFlights);
             },
         });
 
@@ -420,8 +566,8 @@ class App extends Component {
 
         var pointsPerMs = 0.1;
         //第二次生成出来接event的function
-        const animateFlights = (styles) => (event) => {
-
+        // const animateFlights = (styles) => (event) => {
+        function animateFlights(event) {
             var vectorContext = event.vectorContext;
             var frameState = event.frameState;
             var features = flightsSource.getFeatures();
@@ -437,6 +583,10 @@ class App extends Component {
                         var elapsedPoints = elapsedTime * pointsPerMs;
                         // console.log(elapsedPoints);
 
+                        var index = Math.round(10 * elapsedTime / 1000);
+                        if (index >= coords.length-2) {
+                            feature.set('finished', true);
+                        }
                         var maxIndex = Math.min(elapsedPoints, coords.length);
                         var currentLine = new LineString(coords.slice(0, maxIndex));
                         // directly draw the line with the vector context
@@ -451,46 +601,40 @@ class App extends Component {
 
                         //movepoint
                         // var index = Math.round(maxIndex); // point moving with line
-                        var index = Math.round(10 * elapsedTime / 1000);
-                        if (index >= coords.length-2) {
-                            feature.set('finished', true);
+                        if(index<500){
+                            var currentPoint = new Point(coords[index]);
+                            var airEngine = feature.get("EngineModel");
+                            var airPlane =  feature.get("AircraftModel");
+
+                            var plane = findPlane(airPlane);
+
+
+                            col = findEngine(airEngine);
+                            var svg = '<svg fill="'+col+'" width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><' +
+                                'path d="'+plane+'"/></svg>';
+
+                            var mysvg = new Image();
+                            mysvg.src = 'data:image/svg+xml,' + escape(svg);
+
+                            //and then declare your style with img and imgSize
+                            var planeStyle = new Style({
+                                image: new Icon({
+                                    opacity: 1,
+                                    // anchor:[0.5,0.5],
+                                    img: mysvg,
+                                    imgSize:[170,170],
+                                    scale: 0.2,
+                                    rotation:planeRoation(coords[i+1],coords[i])
+                                })
+                            });
+
+
+                            // draw the movepoint with the vector context
+                            vectorContext.setStyle(planeStyle);
+                            vectorContext.drawGeometry(currentPoint);
                         }
-
-                        var currentPoint = new Point(coords[index]);
-
-                        var airEngine = feature.get("EngineModel");
-                        var airPlane =  feature.get("AircraftModel");
-
-                        var plane = findPlane(airPlane);
-
-
-                        col = findEngine(airEngine);
-                        var svgtest = '<svg fill="'+col+'" width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="'+plane+'"/></svg>';
-
-                        var mysvg = new Image();
-                        mysvg.src = 'data:image/svg+xml,' + escape(svgtest);
-
-                        //and then declare your style with img and imgSize
-                        var planeStyle = new Style({
-                            image: new Icon({
-                                opacity: 1,
-                                // anchor:[0.5,0.5],
-                                img: mysvg,
-                                imgSize:[170,170],
-                                scale: 0.2,
-                                rotation:planeRoation(coords[i+1],coords[i])
-                            })
-                        });
-
-
-                        // draw the movepoint with the vector context
-                        vectorContext.setStyle(planeStyle);
-                        vectorContext.drawGeometry(currentPoint);
-
                     }
-
                 }
-
             // tell OpenLayers to continue the animation
             map.render();
         }
@@ -511,7 +655,7 @@ class App extends Component {
             style: function(feature) {
                 // if the animation is still active for a feature, do not
                 // render the feature with the layer style
-                labelStyle.getText().setText(feature.get('Price'));
+                labelStyle.getText().setText("$"+feature.get('Price'));
                 if (feature.get('finished')) {
                     // console.log(feature.get("AirSpaceClass"));
                     return findstyle(feature.get("AirSpaceClass"));
@@ -558,7 +702,7 @@ class App extends Component {
     onChange = (e) => {
         var style = e.target.value;
         this.setState({selectStyle:style});
-        for (var i = 0, ii = layers.length; i < ii; ++i) {
+        for (var i = 0; i<layers.length; i++) {
             layers[i].setVisible(styles[i] === style);
         }
     };
@@ -600,7 +744,7 @@ class App extends Component {
     //fly
     flyTo = (location,done) => {
         var duration = 2000;
-        var zoom = view.getZoom();
+        // var zoom = view.getZoom();
         var parts = 2;
         var called = false;
         function callback(complete) {
@@ -633,14 +777,13 @@ class App extends Component {
     render(){
         return(
             <div className = "app">
-                <div id='map'/>
+                <div id='map'>
+                </div>
                 <select id="layer-select" value={this.state.selectStyle} onChange={this.onChange}>
                     <option value="Aerial">Aerial</option>
                     <option value="AerialWithLabels">Aerial with labels</option>
                     <option value="Road">Road (static)</option>
                     <option value="RoadOnDemand">Road (dynamic)</option>
-                    <option value="collinsBart">Collins Bart</option>
-                    <option value="ordnanceSurvey">Ordnance Survey</option>
                 </select>
                 <button id="rotate-left" title="Rotate clockwise" onClick={this.onRotateleft}>↻</button>
                 <button id="rotate-right" title="Rotate counterclockwise" onClick={this.onRotateright}>↺</button>

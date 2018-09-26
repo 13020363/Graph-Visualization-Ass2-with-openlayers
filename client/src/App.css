@@ -32,7 +32,7 @@
   bottom: auto;
   left: auto;
   right: 0;
-  top: 0;
+  top: 30px;
 }
 
 .ol-custom-overviewmap:not(.ol-collapsed)  {
@@ -58,4 +58,25 @@
 .ol-rotate {
   top: 170px;
   right: 0;
+}
+
+.ol-full-screen{
+  bottom: auto;
+  left: auto;
+  right: 1px;
+  top: 1px;
+}
+
+.ol-custom-attribution{
+  bottom: 40px;
+  left: 7px;
+  right: auto;
+  top: auto;
+}
+
+.ol-scale-line{
+  bottom: 7px;
+  left: 100px;
+  right: auto;
+  top: auto;
 }
