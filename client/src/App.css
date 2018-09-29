@@ -80,3 +80,8 @@
   right: auto;
   top: auto;
 }
+
+#tool {
+  left: 25%;
+  position:absolute;
+}
